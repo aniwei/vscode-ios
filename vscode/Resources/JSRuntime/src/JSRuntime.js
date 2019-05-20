@@ -233,8 +233,10 @@ class JSRumtime {
 
         if (key.isSupportKey) {
           if (event.isModifierEvent) {
-            var evt = new KeyboardEvent(event.type, { ... event })
-            activeElement.dispatchEvent(evt);      
+            if (!event.shiftKey) {
+              var evt = new KeyboardEvent(event.type, { ... event })
+              activeElement.dispatchEvent(evt);      
+            }
           }
         } else {
           var evt = new KeyboardEvent(event.type, { ... event })

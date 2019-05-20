@@ -155,13 +155,15 @@ const keyCodesMap = {
   '45': {
     code: 'Minus',
     key: '-',
-    keyCode: 189
+    keyCode: 189,
+    isSupportKey: true
   },
 
   '46': {
     code: 'Equal',
     key: '=',
-    keyCode: 187
+    keyCode: 187,
+    isSupportKey: true
   },
 
   '42': {
