@@ -227,7 +227,8 @@
         key: digit.code,
         keyCode: digit.keyCode,
         location: 1,
-        isDigit: true
+        isDigit: true,
+        isSupportKey: true
       }
     });
 
@@ -243,7 +244,8 @@
         key: digit,
         keyCode: (i + 4) + 61,
         location: 1,
-        isAlpha: true
+        isAlpha: true,
+        isSupportKey: true
       }
     });
 

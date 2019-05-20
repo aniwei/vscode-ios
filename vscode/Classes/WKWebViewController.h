@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import <WebViewJavascriptBridge.h>
 #import "Application.h"
 
 
 @interface WKWebViewController : UIViewController <WKNavigationDelegate, ApplicationDelegate>
 
 @property (strong, nonatomic) WKWebView * wkWebView;
+@property (strong, nonatomic) WebViewJavascriptBridge * bridge;
 
 - (void) load: (NSString *) url;
 

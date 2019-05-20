@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     [self createWKWebView];
+    [self registerJavaScript];
 }
 
 - (void) createWKWebView {
@@ -25,13 +26,35 @@
     self.wkWebView.scrollView.bounces = NO;
     self.wkWebView.navigationDelegate = self;
     
+    self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.wkWebView];
+    
     [self.view addSubview:self.wkWebView];
 }
 
 
+- (void) registerJavaScript {
+    [self.bridge setWebViewDelegate:self];
+    
+    [self.bridge registerHandler:@"navigator.clipboard.readText" handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        
+        responseCallback([pasteBoard string]);
+    }];
+    
+    [self.bridge registerHandler:@"navigator.clipboard.writeText" handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        
+        [pasteBoard setString: data[@"content"]];
+    }];
+    
+    
+}
+
 
 - (void) evaluateJavaScriptSoftwareDevelopmentKit {
-    NSArray *files = @[@"keyCodes", @"dispatchEvent"];
+    NSArray *files = @[@"jsRuntime"];
     NSString *scripts = @"";
     int i = 0;
     int count = [files count];
@@ -56,7 +79,7 @@
 }
 
 - (void) onProcessKeyEvent: (NSString *)type keyCode: (NSString *) keyCode {
-    NSString *script = [NSString stringWithFormat: @"(function () { if (typeof HardwareKeyboard === 'object') { HardwareKeyboard.dispatchEvent('%@',%@) } else { window.HardwareKeyboard = { queue: [%@] } } })();", type, keyCode, keyCode];
+    NSString *script = [NSString stringWithFormat: @"(function () { if (typeof jsRuntime === 'object') { jsRuntime.dispatchEvent('%@',%@) } })();", type, keyCode, keyCode];
     
     
     [self.wkWebView evaluateJavaScript:script completionHandler:nil];

@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA5C72142289B93A00AB349F /* keyCodes.js in Resources */ = {isa = PBXBuildFile; fileRef = DA5C72132289B93A00AB349F /* keyCodes.js */; };
+		3B2B0C42EAF83390C990AAA4 /* libPods-vscodeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15742B07496BA6065CB01FB9 /* libPods-vscodeUITests.a */; };
+		7E591F13543E5BDA693AD4F1 /* libPods-vscode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E679570F5EBC1E7815F786 /* libPods-vscode.a */; };
+		966205E440ABA06B85A8695D /* libPods-vscodeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C934C2019F885851022FCF6D /* libPods-vscodeTests.a */; };
+		DA2EA38C2291C30900D45CB8 /* libWebViewJavascriptBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2EA38B2291C30900D45CB8 /* libWebViewJavascriptBridge.a */; };
 		DA69A7F72285E92000542945 /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA69A7F62285E92000542945 /* WKWebViewController.m */; };
-		DA69A7F92285EA6500542945 /* dispatchEvent.js in Resources */ = {isa = PBXBuildFile; fileRef = DA69A7F82285EA6500542945 /* dispatchEvent.js */; };
+		DA834DD6228F27E3005D49A1 /* jsRuntime.js in Resources */ = {isa = PBXBuildFile; fileRef = DA834DD5228F27E3005D49A1 /* jsRuntime.js */; };
 		DA880B4B2285C91900B6C2DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA880B4A2285C91900B6C2DF /* AppDelegate.m */; };
 		DA880B512285C91900B6C2DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA880B4F2285C91900B6C2DF /* Main.storyboard */; };
 		DA880B532285C91900B6C2DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA880B522285C91900B6C2DF /* Assets.xcassets */; };
@@ -38,10 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15742B07496BA6065CB01FB9 /* libPods-vscodeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vscodeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		192F0EFB50AB6482560766F4 /* Pods-vscode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vscode/Pods-vscode.debug.xcconfig"; sourceTree = "<group>"; };
+		1B35BDEE6EC870CF51B2B1B0 /* Pods-vscodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscodeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vscodeUITests/Pods-vscodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		32A607277E938579B9B04BCA /* Pods-vscodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscodeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vscodeUITests/Pods-vscodeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3D62C78C36E6016BDCA231E2 /* Pods-vscodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vscodeTests/Pods-vscodeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4849C061B8858ECFFA46D2F8 /* Pods-vscode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscode.release.xcconfig"; path = "Pods/Target Support Files/Pods-vscode/Pods-vscode.release.xcconfig"; sourceTree = "<group>"; };
+		79DF39D96C5F9EA83BF4B545 /* Pods-vscodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vscodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-vscodeTests/Pods-vscodeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C934C2019F885851022FCF6D /* libPods-vscodeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vscodeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2EA38B2291C30900D45CB8 /* libWebViewJavascriptBridge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libWebViewJavascriptBridge.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5C72132289B93A00AB349F /* keyCodes.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = keyCodes.js; sourceTree = "<group>"; };
 		DA69A7F52285E92000542945 /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		DA69A7F62285E92000542945 /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		DA69A7F82285EA6500542945 /* dispatchEvent.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = dispatchEvent.js; sourceTree = "<group>"; };
+		DA834DD5228F27E3005D49A1 /* jsRuntime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jsRuntime.js; path = JSRuntime/dist/jsRuntime.js; sourceTree = "<group>"; };
 		DA880B462285C91900B6C2DF /* vscode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vscode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA880B492285C91900B6C2DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA880B4A2285C91900B6C2DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +71,7 @@
 		DA880B6F2285C91A00B6C2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA880B7D2285C9C900B6C2DF /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		DA880B7E2285C9C900B6C2DF /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		E1E679570F5EBC1E7815F786 /* libPods-vscode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vscode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2EA38C2291C30900D45CB8 /* libWebViewJavascriptBridge.a in Frameworks */,
+				7E591F13543E5BDA693AD4F1 /* libPods-vscode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966205E440ABA06B85A8695D /* libPods-vscodeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +96,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2B0C42EAF83390C990AAA4 /* libPods-vscodeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2711F688EFF09F29658117E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				192F0EFB50AB6482560766F4 /* Pods-vscode.debug.xcconfig */,
+				4849C061B8858ECFFA46D2F8 /* Pods-vscode.release.xcconfig */,
+				3D62C78C36E6016BDCA231E2 /* Pods-vscodeTests.debug.xcconfig */,
+				79DF39D96C5F9EA83BF4B545 /* Pods-vscodeTests.release.xcconfig */,
+				1B35BDEE6EC870CF51B2B1B0 /* Pods-vscodeUITests.debug.xcconfig */,
+				32A607277E938579B9B04BCA /* Pods-vscodeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA880B3D2285C91900B6C2DF = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +123,8 @@
 				DA880B612285C91900B6C2DF /* vscodeTests */,
 				DA880B6C2285C91A00B6C2DF /* vscodeUITests */,
 				DA880B472285C91900B6C2DF /* Products */,
+				2711F688EFF09F29658117E8 /* Pods */,
+				FCF3E8BDB1E6BFCEFCBC0F77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +175,7 @@
 		DA880B7B2285C97E00B6C2DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DA834DD5228F27E3005D49A1 /* jsRuntime.js */,
 				DA69A7F82285EA6500542945 /* dispatchEvent.js */,
 				DA5C72132289B93A00AB349F /* keyCodes.js */,
 			);
@@ -159,6 +193,17 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		FCF3E8BDB1E6BFCEFCBC0F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2EA38B2291C30900D45CB8 /* libWebViewJavascriptBridge.a */,
+				E1E679570F5EBC1E7815F786 /* libPods-vscode.a */,
+				C934C2019F885851022FCF6D /* libPods-vscodeTests.a */,
+				15742B07496BA6065CB01FB9 /* libPods-vscodeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA880B722285C91A00B6C2DF /* Build configuration list for PBXNativeTarget "vscode" */;
 			buildPhases = (
+				8EDD84AC48197BF43140B09A /* [CP] Check Pods Manifest.lock */,
 				DA880B422285C91900B6C2DF /* Sources */,
 				DA880B432285C91900B6C2DF /* Frameworks */,
 				DA880B442285C91900B6C2DF /* Resources */,
@@ -183,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA880B752285C91A00B6C2DF /* Build configuration list for PBXNativeTarget "vscodeTests" */;
 			buildPhases = (
+				053FC6D4B5CAF335431722BE /* [CP] Check Pods Manifest.lock */,
 				DA880B5A2285C91900B6C2DF /* Sources */,
 				DA880B5B2285C91900B6C2DF /* Frameworks */,
 				DA880B5C2285C91900B6C2DF /* Resources */,
@@ -201,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA880B782285C91A00B6C2DF /* Build configuration list for PBXNativeTarget "vscodeUITests" */;
 			buildPhases = (
+				8F644FA66957982468705126 /* [CP] Check Pods Manifest.lock */,
 				DA880B652285C91A00B6C2DF /* Sources */,
 				DA880B662285C91A00B6C2DF /* Frameworks */,
 				DA880B672285C91A00B6C2DF /* Resources */,
@@ -262,8 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA69A7F92285EA6500542945 /* dispatchEvent.js in Resources */,
-				DA5C72142289B93A00AB349F /* keyCodes.js in Resources */,
+				DA834DD6228F27E3005D49A1 /* jsRuntime.js in Resources */,
 				DA880B562285C91900B6C2DF /* LaunchScreen.storyboard in Resources */,
 				DA880B532285C91900B6C2DF /* Assets.xcassets in Resources */,
 				DA880B512285C91900B6C2DF /* Main.storyboard in Resources */,
@@ -285,6 +332,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		053FC6D4B5CAF335431722BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vscodeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EDD84AC48197BF43140B09A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vscode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F644FA66957982468705126 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vscodeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA880B422285C91900B6C2DF /* Sources */ = {
@@ -400,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -453,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -463,11 +567,13 @@
 		};
 		DA880B732285C91A00B6C2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 192F0EFB50AB6482560766F4 /* Pods-vscode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EL2GHG65R;
 				INFOPLIST_FILE = vscode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,11 +587,13 @@
 		};
 		DA880B742285C91A00B6C2DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4849C061B8858ECFFA46D2F8 /* Pods-vscode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EL2GHG65R;
 				INFOPLIST_FILE = vscode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +607,7 @@
 		};
 		DA880B762285C91A00B6C2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D62C78C36E6016BDCA231E2 /* Pods-vscodeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +627,7 @@
 		};
 		DA880B772285C91A00B6C2DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79DF39D96C5F9EA83BF4B545 /* Pods-vscodeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +647,7 @@
 		};
 		DA880B792285C91A00B6C2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B35BDEE6EC870CF51B2B1B0 /* Pods-vscodeUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EL2GHG65R;
@@ -555,6 +666,7 @@
 		};
 		DA880B7A2285C91A00B6C2DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A607277E938579B9B04BCA /* Pods-vscodeUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6EL2GHG65R;
