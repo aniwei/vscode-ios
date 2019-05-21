@@ -24,8 +24,8 @@
     
     wk.view.backgroundColor = [UIColor whiteColor];
     
-    [wk load: @"http://192.168.31.157:8443"];
-//    [wk load: @"https://code.expri.io"];
+    [wk load: @"https://code.expri.io"];
+//    [wk load: @"http://192.168.31.157:8443"];
     
     application.keyCommandDelegate = wk;
     

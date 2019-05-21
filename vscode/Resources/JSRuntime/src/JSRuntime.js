@@ -3,6 +3,7 @@ import keyCodesMap from './keyCodeMap';
 import { modifierKeys, assign } from './shared';
 
 const ATTRIBUTE_NAME = 'jsRuntimeProperty';
+const slice = [].slice;
 
 class JSRumtime {
   constructor () {
@@ -16,6 +17,7 @@ class JSRumtime {
     this.id = 1;
 
     this.isListenedEditor = false;
+    
 
     this.whenJavaScripBridgeReady(this.onJavaScripBridgeReady);
     this.fixCopyExecCommand();
@@ -195,13 +197,100 @@ class JSRumtime {
       isComposing: false
     }
   }
+
+  createEditorLisener () {
+    this.fixEditorMouseEvent();
+  }
+
+  fixEditorMouseEvent () {
+    const editor = document.querySelector('.editor');
+    const dispatchEvent = (type, e) => {
+      const { changedTouches } = e;
+      const touch = changedTouches[0];
+      const { 
+        clientX, 
+        clientY, 
+        layerX, 
+        layerY, 
+        metaKey, 
+        altKey, 
+        shiftKey, 
+        ctrlKey,
+        offsetX,
+        offsetY,
+        pageX,
+        pageY,
+        screenX,
+        screenY,
+      } = touch;
+
+      const event = {
+        clientX, 
+        clientY, 
+        layerX, 
+        layerY, 
+        metaKey, 
+        altKey, 
+        shiftKey, 
+        ctrlKey,
+        offsetX,
+        offsetY,
+        pageX,
+        pageY,
+        screenX,
+        screenY,
+        x: pageX,
+        y: pageY,
+        bubbles: true,
+        isTrusted: true
+      };
+
+      const editor = e.target;
+
+      if (editor) {
+        editor.dispatchEvent(new MouseEvent(type, this.updateEvent(event)));
+      }
+    }
+
+    editor.addEventListener('touchstart', (e) => {
+      if (this.modifierKeysState.shiftKey) {
+        dispatchEvent('mousedown', e);
+      }
+    }, false);
+
+    editor.addEventListener('touchmove', (e) => {
+      if (this.modifierKeysState.shiftKey) {
+        dispatchEvent('mousemove', e);
+      }
+    });
+
+    editor.addEventListener('touchend', function (e) {
+      if (this.modifierKeysState.shiftKey) {
+        dispatchEvent('mouseup', e);
+      }
+    });
+  }
   
+  onlyShiftKey (event) {
+    return event.shiftKey && (
+      !event.metaKey &&
+      !event.altKey &&
+      !event.ctrlKey
+    )
+  }
 
   dispatchEvent (type, keyCode) {
     const key = this.getKey(keyCode);
     const event = this.createEvent(type || 'keydown', key);
 
     if (key) {
+      if (!this.isListenedEditor) {
+        this.isListenedEditor = true;
+
+        this.createEditorLisener();
+      }
+
+
       if (type === 'keydown') {
         if (key.isModifierKey) {
           this.updateModifierKeyState(key.key, true);
@@ -233,7 +322,7 @@ class JSRumtime {
 
         if (key.isSupportKey) {
           if (event.isModifierEvent) {
-            if (!event.shiftKey) {
+            if (!this.onlyShiftKey(event)) {
               var evt = new KeyboardEvent(event.type, { ... event })
               activeElement.dispatchEvent(evt);      
             }
