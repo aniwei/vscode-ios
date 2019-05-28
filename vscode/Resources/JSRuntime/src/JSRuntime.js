@@ -265,9 +265,9 @@ class JSRumtime {
     });
 
     editor.addEventListener('touchend', function (e) {
-      if (this.modifierKeysState.shiftKey) {
+      // if (this.modifierKeysState.shiftKey) {
         dispatchEvent('mouseup', e);
-      }
+      // }
     });
   }
   
