@@ -154,7 +154,14 @@ class JSRumtime {
       if (key.code === 'Backquote') {
         const esc = this.getKeyCode(41);
   
-        if (this.modifierKeysState.metaKey) {
+        if (
+          this.modifierKeysState.metaKey && 
+            !(
+              this.modifierKeysState.shiftKey || 
+              this.modifierKeysState.ctrlKey || 
+              this.modifierKeysState.altKey
+            )
+          ) {
           return esc;
         }
       }
@@ -318,25 +325,27 @@ class JSRumtime {
           activeElement.addEventListener('keyup', this.onActiveElementKeyUp, false);
         }
 
-        event.id = new Date() - 0;
+        if (key.code === 'Escape') {
+          event.id = new Date() - 0;
 
-        if (key.isSupportKey) {
-          if (event.isModifierEvent) {
-            if (!this.onlyShiftKey(event)) {
-              var evt = new KeyboardEvent(event.type, { ... event })
-              activeElement.dispatchEvent(evt);      
+          if (key.isSupportKey) {
+            if (event.isModifierEvent) {
+              if (!this.onlyShiftKey(event)) {
+                var evt = new KeyboardEvent(event.type, { ... event })
+                activeElement.dispatchEvent(evt);      
+              }
             }
+          } else {
+            var evt = new KeyboardEvent(event.type, { ... event })
+            activeElement.dispatchEvent(evt);
+    
+              if (key.isTabKey) {
+                document.dispatchEvent(evt);
+                window.dispatchEvent(evt);
+              }
           }
-        } else {
-          var evt = new KeyboardEvent(event.type, { ... event })
-          activeElement.dispatchEvent(evt);
-  
-            if (key.isTabKey) {
-              document.dispatchEvent(evt);
-              window.dispatchEvent(evt);
-            }
         }
-  
+
         console.log(key);
       }
     }
